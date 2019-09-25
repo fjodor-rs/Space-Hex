@@ -63,6 +63,10 @@ using namespace std;
 
 #include "surface.h"
 #include "template.h"
+#include "hex.h"
+#include "hexmap.h"
+#include "gameState.h"
+#include "gameStateManager.h"
 
 using namespace Tmpl8;
 

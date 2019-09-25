@@ -18,6 +18,10 @@
       <Filter>template code</Filter>
     </ClInclude>
     <ClInclude Include="precomp.h" />
+    <ClInclude Include="hexmap.h" />
+    <ClInclude Include="hex.h" />
+    <ClInclude Include="gameStateManager.h" />
+    <ClInclude Include="gameState.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">

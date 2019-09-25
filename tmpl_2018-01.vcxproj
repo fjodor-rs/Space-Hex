@@ -144,6 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
+    <ClInclude Include="gameState.h" />
+    <ClInclude Include="gameStateManager.h" />
+    <ClInclude Include="hex.h" />
+    <ClInclude Include="hexmap.h" />
     <ClInclude Include="precomp.h" />
     <ClInclude Include="surface.h" />
     <ClInclude Include="template.h" />
