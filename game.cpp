@@ -16,7 +16,6 @@ void Game::Shutdown()
 }
 
 static Sprite rotatingGun( new Surface( "assets/aagun.tga" ), 36 );
-static int frame = 0;
 
 // -----------------------------------------------------------
 // Main application tick function
@@ -30,7 +29,6 @@ void Game::Tick( float deltaTime )
 	// print something to the text window
 	printf( "this goes to the console window.\n" );
 	// draw a sprite
-	rotatingGun.SetFrame( frame );
+	rotatingGun.NextFrame();
 	rotatingGun.Draw( screen, 100, 100 );
-	if ( ++frame == 36 ) frame = 0;
 }
