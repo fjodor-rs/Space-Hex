@@ -446,6 +446,14 @@ void Sprite::InitializeStartData()
 	}
 }
 
+void Sprite::NextFrame()
+{
+	if ( ++m_CurrentFrame >= m_NumFrames )
+	{
+		m_CurrentFrame = 0;
+	}
+}
+
 Font::Font( const char *a_File, const char *a_Chars )
 {
 	m_Surface = new Surface( a_File );
