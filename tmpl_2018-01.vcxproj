@@ -137,6 +137,11 @@
   <!-- END Custom section -->
   <ItemGroup>
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="gameObject.cpp" />
+    <ClCompile Include="gameObject_Sprite.cpp" />
+    <ClCompile Include="gameObject_UI.cpp" />
+    <ClCompile Include="gameObject_UI_Clickable.cpp" />
+    <ClCompile Include="inputHandler.cpp" />
     <ClCompile Include="surface.cpp" />
     <ClCompile Include="template.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

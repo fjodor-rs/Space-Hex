@@ -8,6 +8,19 @@
     <ClCompile Include="template.cpp">
       <Filter>template code</Filter>
     </ClCompile>
+    <ClCompile Include="gameObject.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameObject_Sprite.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameObject_UI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="gameObject_UI_Clickable.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="inputHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />

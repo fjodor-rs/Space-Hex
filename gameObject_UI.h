@@ -3,9 +3,12 @@
 namespace Tmpl8
 {
 
-class UIObject : GameObject
+class UIObject : public GameObject
 {
   public:
+	virtual void Init();
+	virtual void Shutdown();
+	virtual void Update( float deltatime );
 	void draw();
 };
 
