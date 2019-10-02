@@ -63,10 +63,21 @@ using namespace std;
 
 #include "surface.h"
 #include "template.h"
+
 #include "hex.h"
 #include "hexmap.h"
+
 #include "gameState.h"
+#include "gameState_Menu.h"
+#include "gameState_Playing.h"
 #include "gameStateManager.h"
+
+#include "inputHandler.h"
+
+#include "gameObject.h"
+#include "gameObject_UI.h"
+#include "gameObject_UI_Clickable.h"
+#include "gameObject_Sprite.h"
 
 using namespace Tmpl8;
 

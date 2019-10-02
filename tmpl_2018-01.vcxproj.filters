@@ -18,14 +18,53 @@
       <Filter>template code</Filter>
     </ClInclude>
     <ClInclude Include="precomp.h" />
-    <ClInclude Include="hexmap.h" />
-    <ClInclude Include="hex.h" />
-    <ClInclude Include="gameStateManager.h" />
-    <ClInclude Include="gameState.h" />
+    <ClInclude Include="inputHandler.h" />
+    <ClInclude Include="gameObject.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameObject_Sprite.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameState.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="gameState_Menu.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="gameState_Playing.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="gameStateManager.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="hex.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="hexmap.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="gameObject_UI_Clickable.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="gameObject_UI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">
       <UniqueIdentifier>{bf32dd6e-4be7-4889-8ac6-49e7ee163c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects">
+      <UniqueIdentifier>{6592b32d-acd3-4d8b-840f-f8392aeba145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameState">
+      <UniqueIdentifier>{0a61ae6b-8f5f-4bb6-aaa3-66722a629ace}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{bbeffcd9-86e5-4b61-a209-3f208588fb91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{f464ce16-69f9-433f-b747-b075ef67b162}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

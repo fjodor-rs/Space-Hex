@@ -144,10 +144,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
+    <ClInclude Include="gameObject.h" />
+    <ClInclude Include="gameObject_Sprite.h" />
+    <ClInclude Include="gameObject_UI.h" />
+    <ClInclude Include="gameObject_UI_Clickable.h" />
     <ClInclude Include="gameState.h" />
     <ClInclude Include="gameStateManager.h" />
+    <ClInclude Include="gameState_Menu.h" />
+    <ClInclude Include="gameState_Playing.h" />
     <ClInclude Include="hex.h" />
     <ClInclude Include="hexmap.h" />
+    <ClInclude Include="inputHandler.h" />
     <ClInclude Include="precomp.h" />
     <ClInclude Include="surface.h" />
     <ClInclude Include="template.h" />
