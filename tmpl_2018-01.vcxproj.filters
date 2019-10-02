@@ -8,6 +8,24 @@
     <ClCompile Include="template.cpp">
       <Filter>template code</Filter>
     </ClCompile>
+    <ClCompile Include="gameState.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="gameState_Menu.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="gameState_Playing.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="gameStateManager.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="hex.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="hexmap.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
