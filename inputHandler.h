@@ -1,7 +1,13 @@
 #pragma once
 namespace Tmpl8
 {
-class InputHandler
+static class InputHandler
 {
+  public:
+	vec2 MousePos();
+	bool MouseLeftDown();
+	bool MouseLeftUp();
+	bool MouseRightDown();
+	bool MouseRightUp();
 };
 } // namespace Tmpl8

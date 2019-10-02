@@ -7,10 +7,10 @@ class GameObject
 {
 
   public:
-	void Init();
-	void Shutdown();
-	void Update( float deltatime );
-	void HandleInput();
+	virtual void Init();
+	virtual void Shutdown();
+	virtual void Update( float deltatime );
+	virtual void HandleInput();
 };
 
 }; // namespace Tmpl8
