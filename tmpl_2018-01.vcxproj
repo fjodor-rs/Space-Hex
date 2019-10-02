@@ -137,6 +137,12 @@
   <!-- END Custom section -->
   <ItemGroup>
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="gameState.cpp" />
+    <ClCompile Include="gameStateManager.cpp" />
+    <ClCompile Include="gameState_Menu.cpp" />
+    <ClCompile Include="gameState_Playing.cpp" />
+    <ClCompile Include="hex.cpp" />
+    <ClCompile Include="hexmap.cpp" />
     <ClCompile Include="gameObject.cpp" />
     <ClCompile Include="gameObject_Sprite.cpp" />
     <ClCompile Include="gameObject_UI.cpp" />

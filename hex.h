@@ -7,7 +7,6 @@ class Hex
 {
   private:
 	Sprite sprite;
-	int x, y, z;
 
   public:
 	void Init();
@@ -15,7 +14,7 @@ class Hex
 	void Update( float deltatime );
 	void Draw();
 	void HandleInput();
-	int X, Y, Z;
+	vec3 Pos;
 };
 
 };
