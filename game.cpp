@@ -29,5 +29,7 @@ void Game::Tick( float deltaTime )
 	// draw a sprite
 	rotatingGun.NextFrame();
 	rotatingGun.Draw( screen, 100, 100 );
-	printf("%s",InputHandler::MousePos());
+	//printf("%",InputHandler::MousePos());
+	cout << "(" << InputHandler::MousePos().x << ", " << InputHandler::MousePos().y << ")" << endl;
+	
 }
