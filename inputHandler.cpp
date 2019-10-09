@@ -2,7 +2,7 @@
 
 vec2 InputHandler::MousePos()
 {
-	return vec2(0,0);
+	return vec2( 0, 0 );
 }
 
 bool InputHandler::MouseLeftDown()
