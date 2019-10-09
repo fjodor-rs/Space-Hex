@@ -391,11 +391,11 @@ void Sprite::Draw( Surface* a_Target, int a_X, int a_Y )
 				for ( int x = xs; x < width; x++ )
 				{
 					const Pixel c1 = *(src + x);
-					if (c1 & 0xffffff)
-					{
+					//if (c1 & 0xffffff)
+					//{
 						const Pixel c2 = *(dest + addr + x);
 						*(dest + addr + x) = AddBlend( c1, c2 );
-					}
+					//}
 				}
 			}
 			else
@@ -403,8 +403,13 @@ void Sprite::Draw( Surface* a_Target, int a_X, int a_Y )
 				xs = (lsx > x1)?lsx - x1:0;
 				for ( int x = xs; x < width; x++ )
 				{
-					const Pixel c1 = *(src + x);
-					if (c1 & 0xffffff) *(dest + addr + x) = c1;
+					//const Pixel c1 = *(src + x);
+					//if (c1 & 0xffffff) *(dest + addr + x) = c1;
+
+					const Pixel c1 = *( src + x );
+					const Pixel c2 = *( dest + addr + x );
+					*( dest + addr + x ) = AddBlend( c1, c2 );
+
 				}
 			}
 			addr += dpitch;
