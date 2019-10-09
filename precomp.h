@@ -68,9 +68,9 @@ using namespace std;
 #include "hexmap.h"
 
 #include "gameState.h"
+#include "gameStateManager.h"
 #include "gameState_Menu.h"
 #include "gameState_Playing.h"
-#include "gameStateManager.h"
 
 #include "inputHandler.h"
 

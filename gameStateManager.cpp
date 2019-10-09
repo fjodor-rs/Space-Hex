@@ -2,22 +2,22 @@
 
 GameState *CurrentState;
 
-void GameState::Init()
+void GameStateManager::Init()
 {
 }
 
-void GameState::Shutdown()
+void GameStateManager::Shutdown()
 {
 }
 
-void GameState::Update( float deltatime )
+void GameStateManager::Update( float deltatime )
 {
 }
 
-void GameState::Draw()
+void GameStateManager::Draw()
 {
 }
 
-void GameState::HandleInput()
+void GameStateManager::HandleInput()
 {
 }

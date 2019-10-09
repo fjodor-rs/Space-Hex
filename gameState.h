@@ -2,7 +2,6 @@
 
 namespace Tmpl8
 {
-
 class GameState
 {
   private:
@@ -13,5 +12,4 @@ class GameState
 	virtual void Draw();
 	virtual void HandleInput();
 };
-
 }; // namespace Tmpl8

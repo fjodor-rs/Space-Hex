@@ -1,6 +1,6 @@
 #include "precomp.h"
 
-Sprite sprite;
+Sprite *sprite;
 vec3 Pos;
 
 void Hex::Init()

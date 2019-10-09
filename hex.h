@@ -6,7 +6,7 @@ namespace Tmpl8
 class Hex
 {
   private:
-	Sprite sprite;
+	Sprite *sprite;
 
   public:
 	void Init();

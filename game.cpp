@@ -26,9 +26,8 @@ void Game::Tick( float deltaTime )
 	screen->Clear( 0 );
 	// print something in the graphics window
 	screen->Print( "hello world", 2, 2, 0xffffff );
-	// print something to the text window
-	printf( "this goes to the console window.\n" );
 	// draw a sprite
 	rotatingGun.NextFrame();
 	rotatingGun.Draw( screen, 100, 100 );
+	printf("%s",InputHandler::MousePos());
 }

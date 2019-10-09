@@ -6,7 +6,7 @@ namespace Tmpl8
 class GameStateManager
 {
   private:
-	GameState CurrentState;
+	GameState *CurrentState;
   public:
 	void Init();
 	void Shutdown();
