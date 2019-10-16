@@ -29,9 +29,9 @@ void Game::Tick( float deltaTime )
 	// draw a sprite
 	rotatingGun.Draw( screen, 100, 100 );
 	rotatingGun.NextFrame();
+	rotatingGun.Draw( screen, 100, 100 );
 	pizza.Draw( screen, -20, 0 );
 	//printf("%s",InputHandler::MousePos());
-	rotatingGun.Draw( screen, 100, 100 );
 	//printf("%",InputHandler::MousePos());
 	cout << "(" << InputHandler::MousePos().x << ", " << InputHandler::MousePos().y << ")" << endl;
 	
