@@ -7,12 +7,17 @@ class Hexmap
 {
 
   public:
-	void Init();
-	void Shutdown();
+	Hexmap( int width, int heigth );
+	Hexmap();
 	void Update( float deltatime );
-	void Draw();
+	void Draw( Surface *screen );
 	void HandleInput();
+	Hex *Map;
 
+  private:
+	Sprite *basicHex;
+	int width;
+	int heigth;
 };
 
 }; // namespace Tmpl8
