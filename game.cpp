@@ -5,7 +5,7 @@
 // -----------------------------------------------------------
 void Game::Init()
 {
-
+	Input = new InputHandler();
 }
 
 // -----------------------------------------------------------
@@ -34,5 +34,6 @@ void Game::Tick( float deltaTime )
 	//printf("%s",InputHandler::MousePos());
 	//printf("%",InputHandler::MousePos());
 	cout << "(" << InputHandler::MousePos().x << ", " << InputHandler::MousePos().y << ")" << endl;
-	
+	screen->Line( InputHandler::MousePos().x, 0, InputHandler::MousePos().x, SCRHEIGHT - 1, 0xff0000 );
+	screen->Line( 0, InputHandler::MousePos().y, SCRWIDTH, InputHandler::MousePos().y, 0xff0000 );
 }
