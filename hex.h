@@ -9,12 +9,14 @@ class Hex
 	Sprite *sprite;
 
   public:
+	Hex();
+	Hex( Sprite *sprite, vec2 pos );
 	void Init();
 	void Shutdown();
 	void Update( float deltatime );
-	void Draw();
+	void Draw(Surface *screen);
 	void HandleInput();
-	vec3 Pos;
+	vec2 pos;
 };
 
 };
