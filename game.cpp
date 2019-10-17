@@ -16,7 +16,7 @@ void Game::Init()
 
 	//https://www.redblobgames.com/grids/hexagons/#map-storage
 	
-	TheWorld = Hexmap(5,5);
+	TheWorld = Hexmap(50,50);
 	
 }
 

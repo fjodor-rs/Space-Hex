@@ -6,7 +6,7 @@ Hexmap::Hexmap() {
 
 Hexmap::Hexmap( int width, int heigth ) : width(width), heigth(heigth)
 {
-	basicHex = new Sprite( new Surface( "assets/basic_hex2.png" ), 1 );
+	basicHex = new Sprite( new Surface( "assets/hextest.png" ), 1 );
 	int t = 0;
 	int k = 0;
 	Map = new Hex[width * heigth];
@@ -14,7 +14,7 @@ Hexmap::Hexmap( int width, int heigth ) : width(width), heigth(heigth)
 	{
 		for ( int q = t; q < t + width; q++ )
 		{
-			Map[( q + ( r / 2 ) ) + 5 * r] = Hex( basicHex, vec2( q, r ) );
+			Map[( q + ( r / 2 ) ) + width * r] = Hex( basicHex, vec2( q, r ) );
 		}
 		if ( --k % 2 == 0 ) t--;
 	}
