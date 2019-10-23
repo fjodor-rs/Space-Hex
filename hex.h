@@ -7,6 +7,7 @@ class Hex
 {
   private:
 	Sprite *sprite;
+	vec2 size;
 
   public:
 	Hex();
