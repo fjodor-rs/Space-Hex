@@ -79,6 +79,13 @@ using namespace std;
 #include "gameObject_UI_Clickable.h"
 #include "gameObject_Sprite.h"
 
+extern "C"
+{
+#include "lua/lua.h"
+#include "lua/lauxlib.h"
+#include "lua/lualib.h"
+}
+
 using namespace Tmpl8;
 
 #include "game.h"
