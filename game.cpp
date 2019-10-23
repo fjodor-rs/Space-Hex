@@ -15,10 +15,10 @@ void Game::Init()
 	
 	//https://www.redblobgames.com/grids/hexagons/#map-storage
 	
-	/*lua_State *L;
+	lua_State *L;
 	L = luaL_newstate();
 	luaopen_base( L );
-	luaopen_string( L );*/
+	luaopen_string( L );
 	TheWorld = Hexmap(50,50);
 }
 
