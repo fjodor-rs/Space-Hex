@@ -9,6 +9,8 @@ Hex *hexMap;
 
 Hexmap TheWorld;
 
+Camera Cam;
+
 void Game::Init()
 {
 	Input = new InputHandler();
@@ -20,6 +22,7 @@ void Game::Init()
 	luaopen_base( L );
 	luaopen_string( L );
 	TheWorld = Hexmap(50,50);
+	Cam = Camera();
 }
 
 // -----------------------------------------------------------
@@ -33,15 +36,21 @@ void Game::Shutdown()
 // -----------------------------------------------------------
 void Game::Tick( float deltaTime )
 {
+	// update the camera
+	Cam.Update();
+
 	// clear the graphics window
 	screen->Clear( 0xff000000 );
 	// print something in the graphics window
 	screen->Print( "hello world", 2, 2, 0xffffff );
 	// draw a sprite
-	TheWorld.Draw(screen);
-	//printf("%s",InputHandler::MousePos());
-	//printf("%",InputHandler::MousePos());
-	cout << "(" << InputHandler::MousePos().x << ", " << InputHandler::MousePos().y << ")" << endl;
+	TheWorld.Draw(screen, Cam.Transform);
+
+	InputHandler::MouseWheelMove(0,0);
+
+	cout << "(" << InputHandler::MouseWheel().x << ", " << InputHandler::MouseWheel().y << ")" << endl;
 	screen->Line( InputHandler::MousePos().x, 0, InputHandler::MousePos().x, SCRHEIGHT - 1, 0xff0000 );
 	screen->Line( 0, InputHandler::MousePos().y, SCRWIDTH, InputHandler::MousePos().y, 0xff0000 );
+
+
 }

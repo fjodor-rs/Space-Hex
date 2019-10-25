@@ -5,6 +5,7 @@ class InputHandler
 {
   public:
 	static vec2 MousePos();
+	static vec2 MouseWheel();
 	static bool MouseLeftDown();
 	static bool MouseLeftUp();
 	static bool MouseRightDown();
@@ -25,6 +26,12 @@ class InputHandler
 	static void KeyDown( int key )
 	{ /* implement if you want to handle keys */
 	}
+	static void MouseWheelMove(float x, float y)
+	{
+		wheel = vec2(x, y);
+	}
+	
 	static vec2 mp;
+	static vec2 wheel;
 };
 } // namespace Tmpl8

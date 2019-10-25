@@ -138,6 +138,9 @@
     <ClCompile Include="Lua\lzio.c">
       <Filter>Lua</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
@@ -257,6 +260,9 @@
     <ClInclude Include="gameObject_UI_Clickable.h">
       <Filter>GUI</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">
@@ -276,6 +282,9 @@
     </Filter>
     <Filter Include="Lua">
       <UniqueIdentifier>{90b2cf93-a914-412c-a7ba-6a60d2752325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{3710c5d8-cdf0-463c-be84-3196bc9b3c45}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

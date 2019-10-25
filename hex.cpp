@@ -1,6 +1,7 @@
 #include "precomp.h"
 
-namespace Tmpl8 {
+namespace Tmpl8
+{
 
 Sprite *sprite;
 vec2 pos;
@@ -9,13 +10,12 @@ Hex::Hex()
 {
 }
 
-Hex::Hex(Sprite *sprite, vec2 pos)
-	: sprite(sprite)
-	, pos(pos)
+Hex::Hex( Sprite *sprite, vec2 pos )
+	: sprite( sprite ), pos( pos )
 {
-	float x = sprite->GetWidth();
-	float y = sprite->GetHeight();
-	size = vec2(floor(x / sqrt(3)), y / 2 );
+	width = sprite->GetWidth();
+	height = sprite->GetHeight();
+	size = vec2( floor( width / sqrt( 3 ) ), height / 2 );
 }
 
 void Hex::Init()
@@ -24,22 +24,24 @@ void Hex::Init()
 
 void Hex::Shutdown()
 {
-
 }
 
-void Hex::Update(float deltatime)
+void Hex::Update( float deltatime )
 {
-
 }
 
-void Hex::Draw(Surface* screen) 
+void Hex::Draw( Surface *screen, mat4 cam )
 {
-	sprite->Draw(screen, size.x * (sqrtf(3) * pos.x + (sqrtf(3)/2) * pos.y), size.y * 3./2 * pos.y);
+	float x = size.x * ( sqrtf( 3 ) * pos.x + ( sqrtf( 3 ) / 2 ) * pos.y );
+	float y = size.y * 3. / 2 * pos.y;
+
+	vec3 position = vec3(x, y, 0);
+	vec3 posCorrect = cam * position;
+	sprite->Draw( screen, posCorrect.x, posCorrect.y );
 }
 
 void Hex::HandleInput()
 {
-
 }
 
-}
+} // namespace Tmpl8

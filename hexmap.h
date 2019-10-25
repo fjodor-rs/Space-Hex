@@ -10,7 +10,7 @@ class Hexmap
 	Hexmap( int width, int heigth );
 	Hexmap();
 	void Update( float deltatime );
-	void Draw( Surface *screen );
+	void Draw( Surface *screen, mat4 cam );
 	void HandleInput();
 	Hex *Map;
 

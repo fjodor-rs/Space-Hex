@@ -1,10 +1,16 @@
 #include "precomp.h"
 
 vec2 InputHandler::mp = vec2( 0, 0 );
+vec2 InputHandler::wheel = vec2( 0, 0 );
 
 vec2 InputHandler::MousePos()
 {
 	return mp;
+}
+
+vec2 InputHandler::MouseWheel()
+{
+	return wheel;
 }
 
 bool InputHandler::MouseLeftDown()

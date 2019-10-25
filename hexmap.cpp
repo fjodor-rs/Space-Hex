@@ -24,11 +24,11 @@ void Hexmap::Update( float deltatime )
 {
 }
 
-void Hexmap::Draw(Surface *screen)
+void Hexmap::Draw(Surface *screen, mat4 cam)
 {
 	for ( int i = 0; i < width*heigth; i++ )
 	{
-		Map[i].Draw(screen);
+		Map[i].Draw(screen, cam);
 	}
 }
 

@@ -79,6 +79,8 @@ using namespace std;
 #include "gameObject_UI_Clickable.h"
 #include "gameObject_Sprite.h"
 
+#include "Camera.h"
+
 extern "C"
 {
 #include "lua/lua.h"
