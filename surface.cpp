@@ -420,13 +420,63 @@ void Sprite::Draw( Surface* a_Target, int a_X, int a_Y )
 
 void Sprite::DrawScaled( int a_X, int a_Y, int a_Width, int a_Height, Surface* a_Target )
 {
-	if ((a_Width == 0) || (a_Height == 0)) return;
-	for ( int x = 0; x < a_Width; x++ ) for ( int y = 0; y < a_Height; y++ )
+	if ( ( a_Width == 0 ) || ( a_Height == 0 ) ) return;
+
+	if ( ( a_X < -a_Width ) || ( a_X > ( a_Target->GetWidth() + a_Width ) ) ) return;
+	if ( ( a_Y < -a_Height ) || ( a_Y > ( a_Target->GetHeight() + a_Height ) ) ) return;
+	int x1 = a_X, x2 = a_X + a_Width;
+	int y1 = a_Y, y2 = a_Y + a_Height;
+	Pixel *src = GetBuffer() + m_CurrentFrame * a_Width;
+	if ( x1 < 0 )
 	{
-		int u = (int)((float)x * ((float)m_Width / (float)a_Width));
-		int v = (int)((float)y * ((float)m_Height / (float)a_Height));
-		Pixel color = GetBuffer()[u + v * m_Pitch];
-		if (color & 0xffffff) a_Target->GetBuffer()[a_X + x + ((a_Y + y) * a_Target->GetPitch())] = color;
+		src += -x1;
+		x1 = 0;
+	}
+	if ( x2 > a_Target->GetWidth() ) x2 = a_Target->GetWidth();
+	if ( y1 < 0 )
+	{
+		src += -y1 * m_Pitch;
+		y1 = 0;
+	}
+	if ( y2 > a_Target->GetHeight() ) y2 = a_Target->GetHeight();
+	Pixel *dest = a_Target->GetBuffer();
+	int xs;
+	const int dpitch = a_Target->GetPitch();
+	if ( ( x2 > x1 ) && ( y2 > y1 ) )
+	{
+		unsigned int addr = y1 * dpitch + x1;
+		const int width = x2 - x1;
+		const int height = y2 - y1;
+		for ( int y = 0; y < height; y++ )
+		{
+			const int line = y + ( y1 - a_Y );
+			const int lsx = m_Start[m_CurrentFrame][line] + a_X;
+			if ( m_Flags & FLARE )
+			{
+				xs = ( lsx > x1 ) ? lsx - x1 : 0;
+				for ( int x = xs; x < width; x++ )
+				{
+					
+				}
+			}
+			else
+			{
+				xs = ( lsx > x1 ) ? lsx - x1 : 0;
+				for ( int x = xs; x < width; x++ )
+				{
+					int u = (int)( (float)x * ( (float)m_Width / (float)a_Width ) );
+					int v = (int)( (float)y * ( (float)m_Height / (float)a_Height ) );
+					const Pixel c1 = src[u + v * m_Pitch];
+					const Pixel c2 = *( dest + addr + x );
+					*( dest + addr + x ) = AddBlend( c1, c2 );
+
+					/*Pixel color = GetBuffer()[u + v * m_Pitch];
+					if ( color & 0xffffff ) a_Target->GetBuffer()[a_X + x + ( ( a_Y + y ) * a_Target->GetPitch() )] = color;*/
+				}
+			}
+			addr += dpitch;
+			//src += m_Pitch;
+		}
 	}
 }
 

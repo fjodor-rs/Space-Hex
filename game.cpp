@@ -42,7 +42,7 @@ void Game::Tick( float deltaTime )
 	// clear the graphics window
 	screen->Clear( 0xff000000 );
 	// print something in the graphics window
-	screen->Print( "hello world", 2, 2, 0xffffff );
+	//screen->Print( "hello world", 2, 2, 0xffffff );
 	// draw a sprite
 	TheWorld.Draw(screen, Cam.Transform);
 

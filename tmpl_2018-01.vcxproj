@@ -56,7 +56,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>lib\glew-2.1.0\include;lib\SDL2-2.0.9\include;lib\FreeImage\include</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <ExceptionHandling>Sync</ExceptionHandling>
