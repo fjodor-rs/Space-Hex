@@ -418,7 +418,7 @@ void Sprite::Draw( Surface* a_Target, int a_X, int a_Y )
 	}
 }
 
-void Sprite::DrawScaled( int a_X, int a_Y, int a_Width, int a_Height, Surface* a_Target )
+void Sprite::DrawScaled( int a_X, int a_Y, int a_Width, int a_Height, Surface* a_Target, float zoom )
 {
 	if ( ( a_Width == 0 ) || ( a_Height == 0 ) ) return;
 
@@ -426,16 +426,16 @@ void Sprite::DrawScaled( int a_X, int a_Y, int a_Width, int a_Height, Surface* a
 	if ( ( a_Y < -a_Height ) || ( a_Y > ( a_Target->GetHeight() + a_Height ) ) ) return;
 	int x1 = a_X, x2 = a_X + a_Width;
 	int y1 = a_Y, y2 = a_Y + a_Height;
-	Pixel *src = GetBuffer() + m_CurrentFrame * a_Width;
+	Pixel *src = GetBuffer() + m_CurrentFrame * m_Width;
 	if ( x1 < 0 )
 	{
-		src += -x1;
+		src += (int)( (float)-x1 / zoom );
 		x1 = 0;
 	}
 	if ( x2 > a_Target->GetWidth() ) x2 = a_Target->GetWidth();
 	if ( y1 < 0 )
 	{
-		src += -y1 * m_Pitch;
+		src += (int)( (float)(( -y1 * m_Pitch )) / ( zoom ));
 		y1 = 0;
 	}
 	if ( y2 > a_Target->GetHeight() ) y2 = a_Target->GetHeight();

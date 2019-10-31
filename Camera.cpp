@@ -21,10 +21,10 @@ void Camera::Update()
 		Pos += vec3( -Distance / Zoom, 0, 0 );
 	}
 	if (InputHandler::MouseWheel().y > 0) {
-		if(Zoom < 10) Zoom += 0.5f;
+		if(Zoom < 1) Zoom *= 2;
 	}
 	if (InputHandler::MouseWheel().y < 0) {
-		if ( Zoom > 0.5f ) Zoom -= 0.5f;
+		if ( Zoom > 1/4.0f) Zoom /= 2;
 	}
 	//Zoom kan nog niet want drawScaled is broken
 	Transform = mat4::translation(Pos) *				

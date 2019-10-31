@@ -38,7 +38,7 @@ void Hex::Draw( Surface *screen, mat4 cam )
 	vec3 position = vec3(x, y, 0);
 	vec3 posCorrect = cam * position;
 	//sprite->Draw( screen, posCorrect.x, posCorrect.y );
-	sprite->DrawScaled(posCorrect.x, posCorrect.y, width * cam.cell[0], height * cam.cell[0], screen);
+	sprite->DrawScaled(posCorrect.x, posCorrect.y, width * cam.cell[0], height * cam.cell[0], screen, cam.cell[0]);
 }
 
 void Hex::HandleInput()

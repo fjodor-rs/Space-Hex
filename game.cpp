@@ -21,7 +21,7 @@ void Game::Init()
 	L = luaL_newstate();
 	luaopen_base( L );
 	luaopen_string( L );
-	TheWorld = Hexmap(50,50);
+	TheWorld = Hexmap(100,100);
 	Cam = Camera();
 }
 
@@ -48,7 +48,8 @@ void Game::Tick( float deltaTime )
 
 	InputHandler::MouseWheelMove(0,0);
 
-	cout << "(" << InputHandler::MouseWheel().x << ", " << InputHandler::MouseWheel().y << ")" << endl;
+	//cout << "(" << InputHandler::MouseWheel().x << ", " << InputHandler::MouseWheel().y << ")" << endl;
+	cout << Cam.Transform.cell[0] << endl;
 	screen->Line( InputHandler::MousePos().x, 0, InputHandler::MousePos().x, SCRHEIGHT - 1, 0xff0000 );
 	screen->Line( 0, InputHandler::MousePos().y, SCRWIDTH, InputHandler::MousePos().y, 0xff0000 );
 
